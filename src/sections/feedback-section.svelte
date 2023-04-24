@@ -1,8 +1,8 @@
 <script>
   import GardientBackground from "../components/gardient-background.svelte";
   import NextButton from "../components/next-button.svelte";
-  const src = "src/assets/images/csenge.jpg";
-  const bsrc = "src/assets/images/balint.jpeg";
+  const src = "/images/csenge.jpg";
+  const bsrc = "/images/balint.jpeg";
 </script>
 
 <GardientBackground>

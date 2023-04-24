@@ -17,7 +17,7 @@
 <style>
   section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../src/assets/images/mustang.jpeg") no-repeat;
+      url("/images/mustang.jpeg") no-repeat;
     background-size: cover;
     width: 100vw !important;
     transition: opacity 0.25s ease;
