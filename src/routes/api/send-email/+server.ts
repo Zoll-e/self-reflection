@@ -1,15 +1,15 @@
 import mailgun from "mailgun-js";
-import { mailgunApiKey, mailgunDomain } from "$env/dynamic/private";
 interface EmailData {
   name: string;
   message: string;
 }
+const { MAILGUN_API_KEY, MAILGUN_DOMAIN } = import.meta.env;
 
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
   const mg = mailgun({
-    apiKey: mailgunApiKey,
-    domain: mailgunDomain,
+    apiKey: MAILGUN_API_KEY,
+    domain: MAILGUN_DOMAIN,
   });
 
   try {
