@@ -37,9 +37,9 @@
       <div class="w-[100%] flex-1 text-white space-y-10">
         <h1 class="lg:text-3xl lg:px-10">Üzenj valamit!</h1>
         <p class="lg:px-10">
-          Az itt írt üzenetek eljutnak hozzám, nagyon szerettem volna egy pet
-          projectet és mivel szembejött velem a baromi érdekes Svelte-kit, az
-          önreflexiónak pedig nem volt kötött formája ezért összekötöttem a
+          <s>Az itt írt üzenetek eljutnak hozzám</s>, nagyon szerettem volna egy
+          pet projectet és mivel szembejött velem a baromi érdekes Svelte-kit,
+          az önreflexiónak pedig nem volt kötött formája ezért összekötöttem a
           kellemest a hasznossal!
         </p>
       </div>
