@@ -6,6 +6,7 @@
   export let label = "tovább";
 
   const jumpToCenter = (id: string) => {
+    if (typeof document === "undefined") return;
     const target = document.querySelector(`#${id}`);
     if (target?.clientHeight && target?.clientHeight > window.innerHeight) {
       target?.scrollIntoView({

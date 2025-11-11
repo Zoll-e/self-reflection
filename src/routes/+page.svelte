@@ -7,13 +7,11 @@
   import ReflectionSection from "../sections/reflection-section.svelte";
 </script>
 
-<body>
-  <Hero />
-  <Feedbacks />
-  <ReflectionSection />
-  <Contact />
-  <Footer />
-</body>
+<Hero />
+<Feedbacks />
+<ReflectionSection />
+<Contact />
+<Footer />
 
 <style>
   :global html,
