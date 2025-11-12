@@ -9,11 +9,16 @@ interface EmailData {
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const RESEND_API_KEY = env.RESEND_API_KEY;
+    // Access environment variable - in Vercel, this should be set in Project Settings > Environment Variables
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
     
     if (!RESEND_API_KEY) {
       console.error("RESEND_API_KEY is not set in environment variables");
-      return new Response(JSON.stringify({ error: "Email service not configured" }), {
+      console.error("Available env keys:", Object.keys(env).filter(key => key.includes('RESEND') || key.includes('API')));
+      return new Response(JSON.stringify({ 
+        error: "Email service not configured",
+        message: "RESEND_API_KEY environment variable is missing. Please set it in Vercel project settings."
+      }), {
         status: 500,
         headers: { "Content-Type": "application/json" },
       });
