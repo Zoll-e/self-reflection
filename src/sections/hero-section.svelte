@@ -19,23 +19,49 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/images/mustang.jpeg") no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100vw !important;
     transition: opacity 0.25s ease;
     transition-delay: 1s;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   h2 {
     color: #ffffff;
     font-family: "Inter", sans-serif;
-    /* letter-spacing: 0.35rem; */
-
     line-height: 1.25;
     font-weight: 600;
-    text-shadow: 0.088rem 0.088rem 0.5625rem rgba(0, 0, 0, 0.188);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-out 0.2s both;
   }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   p {
     color: #ffffff;
     line-height: 1.5;
     font-weight: 600;
+    opacity: 0.9;
+    animation: slideUp 0.8s ease-out 0.4s both;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 </style>

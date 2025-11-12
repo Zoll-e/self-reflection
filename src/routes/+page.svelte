@@ -1,6 +1,4 @@
 <script>
-  import Footer from "../components/footer.svelte";
-  import Header from "../components/header.svelte";
   import Contact from "../sections/contact.svelte";
   import Feedbacks from "../sections/feedback-section.svelte";
   import Hero from "../sections/hero-section.svelte";
@@ -11,7 +9,6 @@
 <Feedbacks />
 <ReflectionSection />
 <Contact />
-<Footer />
 
 <style>
   :global html,

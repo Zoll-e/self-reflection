@@ -1,9 +1,8 @@
 <script lang="ts">
-  import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
+  import ChevronLeft from "svelte-material-icons/ChevronLeft.svelte";
 
   export let id = "";
-  export let arrowUp = false;
-  export let label = "tovább";
+  export let label = "vissza";
 
   const jumpToCenter = (id: string) => {
     if (typeof document === "undefined") return;
@@ -23,7 +22,6 @@
       });
     } else {
       // For smaller sections, use scrollIntoView with center
-      // This should work even with overflow hidden by scrolling the document
       target.scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -33,11 +31,7 @@
   };
   let style = "steady";
   const handleMouseOver = () => {
-    if (arrowUp) {
-      style = "rotate-up";
-    } else {
-      style = "rotate";
-    }
+    style = "rotate-left";
   };
   const handleMouseOut = () => {
     style = "steady";
@@ -51,10 +45,10 @@
   on:blur
   on:mouseout={handleMouseOut}
 >
-  <span class={`${style}`}
-    ><ChevronRight size={"2em"} color={"black"} height={"3rem"} /></span
-  >
-  <span class="text-black">{label}</span>
+<span class={`${style}`}
+><ChevronLeft size={"2em"} color={"black"} height={"3rem"} /></span
+>
+<span class="text-black">{label}</span>
 </button>
 
 <style>
@@ -70,7 +64,7 @@
     font-weight: 700;
     background: white;
     border-radius: 2rem;
-    flex-direction: row-reverse;
+    flex-direction: row;
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -104,11 +98,7 @@
     left: 100%;
   }
   
-  .rotate {
-    transform: rotate(90deg);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .rotate-up {
+  .rotate-left {
     transform: rotate(-90deg);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -117,3 +107,4 @@
     transform: rotate(0deg);
   }
 </style>
+
