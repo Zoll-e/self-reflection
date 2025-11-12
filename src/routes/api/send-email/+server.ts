@@ -10,7 +10,7 @@ interface EmailData {
 export const POST: RequestHandler = async ({ request }) => {
   try {
     
-    const MAILGUN_API_KEY = env.RESEND_API_KEY;
+    const MAILGUN_API_KEY = env.MAILGUN_API_KEY;
     
     if (!MAILGUN_API_KEY) {
       const allEnvKeys = Object.keys(env).sort();
