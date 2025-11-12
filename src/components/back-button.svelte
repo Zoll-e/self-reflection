@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ChevronLeft from "svelte-material-icons/ChevronLeft.svelte";
+  import ChevronLeft from "./ChevronLeft.svelte";
 
   export let id = "";
   export let label = "vissza";

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
+  import ChevronRight from "./ChevronRight.svelte";
 
   export let id = "";
   export let arrowUp = false;
